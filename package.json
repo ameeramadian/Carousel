@@ -1,0 +1,23 @@
+{
+  "name": "carousel-component",
+  "version": "1.0.0",
+  "description": "carousel component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch css/styles.scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ameeramadian/Carousel-Component.git"
+  },
+  "author": "ameera madian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ameeramadian/Carousel-Component/issues"
+  },
+  "homepage": "https://github.com/ameeramadian/Carousel-Component#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

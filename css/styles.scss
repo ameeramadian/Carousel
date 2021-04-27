@@ -1,0 +1,108 @@
+/* Global styles
+------------------------------------*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.carousel-inner {
+  padding: 0px;
+}
+
+.carousel-item {
+  background-image: url("/images/carousel.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .carousel-item {
+    height: 400px;
+  }
+}
+
+.carousel-caption {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 24px;
+  text-align: left;
+}
+.fetauredNewsList {
+  padding: 0px;
+}
+
+.list-group-item {
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.list-group-item:first-child,
+.list-group-item:last-child {
+  border-radius: 0px;
+}
+
+//////////////////////////////////////////////////////////// light Layout //////////////////////////////////////////////////////////////////////
+
+$primaryTextBlue: #0a2554;
+$secondaryTextGrrey: #666666;
+$selectionBackgroundGrey: #f1f1f1;
+$highlightBackgroundTeel: #42c3af;
+
+.theme--light {
+  .carousel-caption {
+    background-color: rgba($color: $highlightBackgroundTeel, $alpha: 0.9);
+  }
+
+  .list-group-item {
+    color: $primaryTextBlue;
+  }
+
+  .list-group-item--selected {
+    background-color: $selectionBackgroundGrey;
+    border-right: 20px solid $highlightBackgroundTeel;
+  }
+
+  @media (max-width: 767px) {
+    .list-group-item--selected {
+      border-bottom: 2px solid $highlightBackgroundTeel;
+      border-right: 0px;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////// dark Layout //////////////////////////////////////////////////////////////////////
+
+$backgroundDarkBlue: #132b43;
+
+.theme--dark {
+  .carousel-caption {
+    background-color: rgba($color: $backgroundDarkBlue, $alpha: 0.9);
+    @media (min-width: 768px) and (max-width: 991px) {
+      h5 {
+        color: #42c3af;
+      }
+    }
+  }
+
+  .list-group-item {
+    color: white;
+    background-color: $backgroundDarkBlue;
+  }
+
+  .list-group-item--selected {
+    color: white;
+    background-color: $highlightBackgroundTeel;
+    border-right: 0px;
+  }
+}
